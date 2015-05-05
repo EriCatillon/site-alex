@@ -1,0 +1,479 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/***************** Fonts+Pictos ******************/
+
+@font-face {
+	font-family: 'picto';
+	src:url('webfont/picto.eot?-vr8k89');
+	src:url('webfont/picto.eot?#iefix-vr8k89') format('embedded-opentype'),
+		url('webfont/picto.woff?-vr8k89') format('woff'),
+		url('webfont/picto.ttf?-vr8k89') format('truetype'),
+		url('webfont/picto.svg?-vr8k89#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'picto';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pictoflechehome:before {
+	content: "\e605";
+}
+
+.icon-pictobehance:before {
+	content: "\e603";
+}
+
+.icon-pictocv:before {
+	content: "\e604";
+}
+
+.icon-pictotel:before {
+	content: "\e602";
+}
+
+.icon-pictoroues:before {
+	content: "\e601";
+}
+
+.icon-pictocafe:before {
+	content: "\e615";
+}
+
+.icon-pictovinyl:before {
+	content: "\e600";
+}
+
+.icon-pictolinkedin:before {
+	content: "\e99d";
+}
+
+.icon-pictopinterest:before {
+	content: "\e99e";
+}
+
+.icon-fleche:before {
+	content: "\e99f";
+}
+
+.icon-vague:before {
+	content: "\e9a0";
+}
+
+.icon-logo:before {
+	content: "\e9a1";
+}
+
+.icon-pictomusique:before {
+	content: "\e9b8";
+}
+
+.icon-pictostylo:before {
+	content: "\e9b9";
+}
+
+.icon-pictophotoshop:before {
+	content: "\e9ba";
+}
+
+.icon-pictoillustrator:before {
+	content: "\e9bb";
+}
+
+.icon-pictoindesign:before {
+	content: "\e9bc";
+}
+
+.icon-pictoskills:before {
+	content: "\e99a";
+}
+
+.icon-pictosuivant:before {
+	content: "\e99b";
+}
+
+.icon-pictoprecedant:before {
+	content: "\e993";
+}
+
+.icon-pictomap:before {
+	content: "\e994";
+}
+
+.icon-pictomail:before {
+	content: "\e995";
+}
+
+.icon-pictolettre:before {
+	content: "\e996";
+}
+
+.icon-pictocontact:before {
+	content: "\e997";
+}
+
+.icon-pictoabout:before {
+	content: "\e998";
+}
+
+.icon-pictoportfolio:before {
+	content: "\e999";
+}
+
+
+
+/****** Contenu Index ******/
+
+
+
+.wrapper {
+      height: 100% !important;
+      height: 100%;
+      margin: 0 auto; 
+      /*overflow: hidden;*/
+}
+
+.icon-logo{
+	 font-size: 120px;
+}
+/* portefolio */
+section img{
+	opacity: 0;
+	-webkit-transition: all 3s; /* Safari */
+    transition: all 3s;
+}
+section.anim img{
+	opacity: 1;
+}
+section  .text_content{
+	opacity: 0;
+	left: 42%;
+    position: absolute;
+    text-align: center;
+    top: 120px;
+    background-color: white;
+    -ms-transform: scale(0,0); /* IE 9 */
+    -webkit-transform: scale(0,0); /* Safari */
+    transform: scale(0,0); /* Standard syntax */
+    -webkit-transition: all 1s; /* Safari */
+    transition: all 1s;
+}
+section  .text_content.anim{
+	opacity: 1;
+	ms-transform: scale(1,1); /* IE 9 */
+    -webkit-transform: scale(1,1); /* Safari */
+    transform: scale(1,1); 
+}
+
+/* anim text index*/
+.title_anim span{
+	display: inline-block;
+	opacity: 0;
+	-webkit-transform: rotateX(90deg); /* Safari */
+	transform: rotateX(90deg);
+	transition: all 1s;
+}
+.title_anim span.anime_text{
+	display: inline-block;
+	opacity: 1;
+	-webkit-transform: rotateX(0deg); /* Safari */
+	transform: rotateX(0deg);
+}
+.picto_rotate{
+	display: inline-block;
+	transform: rotateY(0deg);
+	transition: all 1s;
+}
+.picto_hover{
+	display: inline-block;
+	width:60%; 
+}
+.portfolio{
+	width: 50%;
+	float: left;
+	text-align: center;
+	position: relative;
+}
+.contact{
+	width: 50%;
+	float: left;
+	text-align: center;
+	position: relative;
+}
+.skills{
+	width: 50%;
+	float: left;
+	text-align: center;
+	position: relative;
+}
+.about{
+	width: 50%;
+	float: left;
+	text-align: center;
+	position: relative;
+}
+.bg-hover{
+	opacity: 0;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	height: 0px;
+	width: 0px;
+	background: black;
+	transition: all 0.5s;
+	z-index: -10000;
+}
+.bg-hover.anim{
+	opacity: 1;
+	top: 0;
+	left: 0;
+	height: 98%;
+	width: 99%;
+	transition: all 0.5s;
+} 
+.picto_hover:hover .picto_rotate{
+    
+    transform: rotateY(180deg);
+    
+ }
+ .picto_hover:hover span{
+    
+    color: #2c96c6;
+    
+ }   
+.icon-pictoportfolio{
+	 font-size: 100px;
+
+}
+.icon-pictoskills{
+	 font-size: 100px;
+}
+
+.icon-pictocontact{
+	 font-size: 100px;
+}
+
+.icon-pictoabout{
+	 font-size: 100px;
+}
+
+.icon-pictoroues{
+	 font-size: 150px;
+	 color: #a3a3a3;
+}
+
+.icon-pictovinyl{
+	 font-size: 150px;
+	 color: #a3a3a3;
+}
+
+.icon-vague{
+	 font-size: 130px;
+	 color: #2c96c6;
+}
+
+.icon-fleche{
+	 font-size: 35px;
+	 color: #2c96c6;
+}
+
+h3{
+	font-family: oswald;
+	font-size: 32px;
+	color: #101010;
+	letter-spacing: 2px;
+}
+
+p{
+	font-family: 'Playfair Display', serif;
+	font-style: italic;
+	font-size: 16px;
+	letter-spacing: 1px;
+	color: #a1a1a1;
+}
+
+.about h3{
+	font-family: 'Playfair Display', serif;
+	font-style: italic;
+	font-size: 32px;
+}
+
+h1{
+	font-family: oswald;
+	text-transform: uppercase;
+	font-size: 45px;
+	letter-spacing: 28px;
+}
+
+h2{
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 18px; 
+	color: #a1a1a1;
+	letter-spacing: 6px;
+}
+
+.home h2{
+	font-family: 'Playfair Display', serif;
+	font-style: italic;
+	font-size: 21px;
+	letter-spacing: 1px;
+	text-transform: none;
+}
+
+.nompicto{
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 1px;
+	font-style: normal;
+	color: #2c96c6;
+}
+
+.icon-pictolinkedin{
+	color: #101010;
+	font-size: 40px;
+	text-decoration: none;
+}
+
+
+.icon-pictolinkedin:hover{
+	color: #2c96c6;
+	transition: 0,300ms;
+	text-decoration: none;
+}
+
+
+.icon-pictobehance{
+	color: #101010;
+	font-size: 50px;
+	text-decoration: none;
+}
+
+
+.icon-pictobehance:hover{
+	color: #2c96c6;
+	transition: 0,300ms;
+	text-decoration: none;
+}
+
+.icon-pictopinterest{
+	color: #101010;
+	font-size: 45px;
+	text-decoration: none;
+}
+
+
+.icon-pictopinterest:hover{
+	color: #2c96c6;
+	transition: 0,300ms;
+	text-decoration: none;
+}
+
+.icon-pictoflechehome{
+	font-size: 120px;
+}
+
+
+/****** Contenu Portfolio ******/
+
+
+
+/****** Contenu Skills ******/
+
+
+
+/****** Contenu Contact ******/
+
+.icon-pictotel{
+	 font-size: 100px;
+}
+
+.icon-pictomail{
+	 font-size: 100px;
+}
+
+.icon-pictomap{
+	 font-size: 100px;
+}
+
+.icon-pictoportfolio{
+	 font-size: 100px;
+}
+
+.icon-pictocv{
+	 font-size: 100px;
+}
+
+.figure span{
+	font-size: 90px;
+}
+
+.figure p{
+	font-size: 12px;
+}
+
+.nomfooter{
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif; 
+	font-style: normal;
+}
